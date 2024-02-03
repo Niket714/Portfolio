@@ -1,61 +1,66 @@
 body{
     position: relative;
     min-height: 100vh;
+    background-color: #212121;
 }
 
 .header_class{
-    background-color: lightsalmon;
-    height: 2rem;
+    background-color: #313131;
+    height: 6vh;
     width: 100%;
     min-width: 100vh;
     display: flex;
     justify-content: space-between;
-    align-content: center ;
+    align-items: center;
 }
 
 .header_class ul{
-    height: 2rem;
+    height: 4vh;
     display: flex;
     align-content: center;
+    padding-left:0px;
+       
 }
 
 .header_class div{
-    margin-left: 1.5rem;
-    height: 2rem;
+    margin-left: 10vh;
+    height: 4vh;
 }
 
 .header_class div p{
     font-weight: bolder;
     font-size: larger;
-    height: 2rem;
+    height: 4vh;
+    color: #FF651C;
 }
 
 .header_class ul li{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding-left: 3vh;
+    padding-right: 3vh;
 }
 
-.header_class ul li a{
+.header_class a{
     text-decoration-color: none !important;
-    color: black;
+    color: whitesmoke;
     font-weight: bolder;
+    
 }
 
 .header_class ul li a:hover{
     text-decoration-color: none !important;
-    color: rgb(32, 32, 246);
+    color: #FF651C;
 }
 
 .footer_class{
-    background-color: lightsalmon;
+    background-color: #313131;
     position: absolute;
-    bottom: 0rem ;
+    bottom: 0vh;
     width:100%;
     min-width:100vh;
-    height: 1.5rem;
+    height: 4vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -63,8 +68,131 @@ body{
 }
 
 .footer_class footer{
-    font-weight: bolder;
+    /* font-weight: bolder; */
+    color: #FF651C;
 }
 
 
 
+.protest-revolution-regular {
+    font-family: "Protest Revolution", sans-serif;
+    font-weight: bolder;
+    font-style: normal;
+}
+  
+ 
+/* SIDEBAR POSITION */
+.sidebar {
+    background-color: #313131;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    min-width: 300px;
+}
+
+.sidebar__content {
+    padding: 8px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+/* SIDEBAR HIDDEN STATE */
+.sidebar[aria-hidden="true"] {
+    transition: 200ms;
+    transform: translateX(100%);
+}
+
+
+/* SIDEBAR VISIBLE STATE */
+.sidebar:not([aria-hidden]),
+  .sidebar[aria-hidden="false"] {
+    transition: 200ms;
+    transform: translateX(0);
+}
+
+.header_class2{
+    display: none;
+}
+
+@media (max-width: 900px) {
+    body{
+        position: relative;
+        min-height: 100vh;
+    }
+
+    .header_class{
+        display:none;
+    }
+    .header_class2{
+        background-color: #313131;
+        height: 6vh;
+        min-width: 100vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .toggle_button{
+        margin-right: 2vh;
+    }
+    
+    .header_class2 div{
+        margin-left: 3vh;
+        height: 4vh;
+    }
+    
+    .header_class2 div p{
+        font-weight: bolder;
+        font-size: larger;
+        height: 4vh;
+    }
+    
+    .header_class2 a{
+        text-decoration-color: none !important;
+        color: #FF651C;
+        font-weight: bolder;
+    }
+    
+    .footer_class{
+        background-color: #313131;
+        position: absolute;
+        bottom: 0vh;
+        width:100%;
+        min-width:100vh;
+        height: 4.5vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+    }
+    
+    .footer_class footer{
+        font-weight: bolder;
+        color: #FF651C;
+    }
+    
+    
+    
+    .protest-revolution-regular {
+        font-family: "Protest Revolution", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+      
+    
+  }
+
+
+  .resume{
+    background-color: #FF651C;
+    color: whitesmoke;
+    border-radius: 1vh;
+    border: none;
+    padding: .5vh;
+    transition: transform 0.3s ease-out;
+  }
+
+  .moving-button:hover {
+    transform: translateY(-0.5vh); /* Move the button 10 pixels to the right on hover */
+  }
