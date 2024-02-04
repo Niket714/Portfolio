@@ -1,7 +1,8 @@
 body{
-    position: relative;
     min-height: 100vh;
     background-color: #212121;
+    display: flex;
+    flex-direction: column;
 }
 
 .header_class{
@@ -56,8 +57,8 @@ body{
 
 .footer_class{
     background-color: #313131;
-    position: absolute;
-    bottom: 0vh;
+    /* bottom: 0 !important; */
+    margin-top: auto;
     width:100%;
     min-width:100vh;
     height: 4vh;
@@ -83,18 +84,36 @@ body{
  
 /* SIDEBAR POSITION */
 .sidebar {
-    background-color: #313131;
+    background-color: #212121;
     height: 100vh;
     position: fixed;
     top: 0;
     right: 0;
     min-width: 300px;
+    z-index: 999;
 }
 
 .sidebar__content {
     padding: 8px;
     overflow-y: scroll;
     overflow-x: hidden;
+}
+
+.sidebar__content ul{
+    list-style-type: none;
+}
+
+.sidebar__content ul li{
+    margin-top: 4vh;
+}
+.sidebar__content ul a{
+    text-decoration-color: none !important;
+    color: whitesmoke;
+    font-weight: bolder;
+}
+
+.sidebar__content ul a:hover{
+    color: #FF651C;
 }
 
 /* SIDEBAR HIDDEN STATE */
@@ -181,18 +200,44 @@ body{
     }
       
     
-  }
+}
 
 
-  .resume{
+.resume{
     background-color: #FF651C;
     color: whitesmoke;
     border-radius: 1vh;
     border: none;
     padding: .5vh;
+    padding-left: 2vh;
+    padding-right: 2vh;
     transition: transform 0.3s ease-out;
-  }
+}
 
-  .moving-button:hover {
+  
+.moving-button:hover {
     transform: translateY(-0.5vh); /* Move the button 10 pixels to the right on hover */
-  }
+}
+
+.form-control:focus {
+    border-color: #FF651C !important;
+    box-shadow: 0 0 5px #FF651C !important;
+}
+
+.form-control{
+    background-color:  #313131!important;
+}
+
+.form-control::placeholder {
+    color: whitesmoke;
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color:  #FF651C!important;
+    border-color: #FF651C !important;
+    box-shadow: none!important;
+}
+
+input, textarea{
+    color: white !important;
+}
