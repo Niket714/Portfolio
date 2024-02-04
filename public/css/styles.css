@@ -81,9 +81,8 @@ body{
     font-style: normal;
 }
   
- 
-/* SIDEBAR POSITION */
-.sidebar {
+ /* SIDEBAR POSITION */
+ .sidebar {
     background-color: #212121;
     height: 100vh;
     position: fixed;
@@ -105,9 +104,10 @@ body{
 
 .sidebar__content ul li{
     margin-top: 4vh;
+    text-decoration: none!important;
 }
 .sidebar__content ul a{
-    text-decoration-color: none !important;
+    /* text-decoration-color: none !important; */
     color: whitesmoke;
     font-weight: bolder;
 }
@@ -125,83 +125,26 @@ body{
 
 /* SIDEBAR VISIBLE STATE */
 .sidebar:not([aria-hidden]),
-  .sidebar[aria-hidden="false"] {
+.sidebar[aria-hidden="false"] {
     transition: 200ms;
     transform: translateX(0);
 }
 
-.header_class2{
+
+.toggle_button{
     display: none;
 }
 
-@media (max-width: 900px) {
-    body{
-        position: relative;
-        min-height: 100vh;
-    }
-
-    .header_class{
+@media (max-width: 1100px) {
+    .small-size-toggle{
         display:none;
-    }
-    .header_class2{
-        background-color: #313131;
-        height: 6vh;
-        min-width: 100vh;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
     }
 
     .toggle_button{
         margin-right: 2vh;
+        display: inherit;
     }
-    
-    .header_class2 div{
-        margin-left: 3vh;
-        height: 4vh;
-    }
-    
-    .header_class2 div p{
-        font-weight: bolder;
-        font-size: larger;
-        height: 4vh;
-    }
-    
-    .header_class2 a{
-        text-decoration-color: none !important;
-        color: #FF651C;
-        font-weight: bolder;
-    }
-    
-    .footer_class{
-        background-color: #313131;
-        position: absolute;
-        bottom: 0vh;
-        width:100%;
-        min-width:100vh;
-        height: 4.5vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        align-content: center;
-    }
-    
-    .footer_class footer{
-        font-weight: bolder;
-        color: #FF651C;
-    }
-    
-    
-    
-    .protest-revolution-regular {
-        font-family: "Protest Revolution", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-    }
-      
-    
 }
-
 
 .resume{
     background-color: #FF651C;
@@ -240,4 +183,31 @@ body{
 
 input, textarea{
     color: white !important;
+}
+
+.home-content{
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.home-heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 25vh;
+}
+
+@media (max-width: 700px) {
+    .home-content{
+        flex-direction: column;
+    }
+
+    .home-heading{
+        margin-bottom: 0;
+        justify-content: center;
+        max-height: 25vh;
+    }
 }
